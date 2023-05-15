@@ -4,7 +4,7 @@ const List = require("../Schema/ListSchema");
 const Router = express.Router();
 
 
-app.get("/",function(req,res){
+Router.get("/",function(req,res){
     List.find({status: "Completed"},function(err,CompletedTasks){
       if(!err){
         res.render("completed",{Tasks: CompletedTasks});
@@ -16,7 +16,7 @@ app.get("/",function(req,res){
     });
 })
   
-app.delete("/", function(req, res) {
+Router.delete("/", function(req, res) {
     const checkdeListId = req.body.checkbox;
       List.findByIdAndRemove(checkdeListId, function(err) {
         if (!err) {
