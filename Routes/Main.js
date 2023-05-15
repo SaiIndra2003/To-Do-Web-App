@@ -31,8 +31,6 @@ Router.get("/", function(req, res) {
         List.insertMany(defaultItems, function(err) {
           if (err) {
             console.log(err);
-          } else {
-            console.log("Succesfully saved default items in db");
           }
         });
         res.redirect("/");
@@ -57,7 +55,6 @@ Router.delete("/", function(req, res) {
     const checkdeListId = req.body.checkbox;
       List.findByIdAndRemove(checkdeListId, function(err) {
         if (!err) {
-          console.log("Removed Succesfully");
           res.redirect("/");
         }
       });
@@ -67,7 +64,6 @@ Router.patch("/",function(req,res){
     const Itemid = req.body.id;
     List.findByIdAndUpdate(Itemid,{status: "Completed"},function(err){
       if(!err){
-        console.log("Updated succesfully");
         res.redirect("/");
       }
       else{

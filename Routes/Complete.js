@@ -20,7 +20,6 @@ Router.delete("/", function(req, res) {
     const checkdeListId = req.body.checkbox;
       List.findByIdAndRemove(checkdeListId, function(err) {
         if (!err) {
-          console.log("Removed Succesfully");
           res.redirect("/completed");
         }
       });
