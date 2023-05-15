@@ -1,6 +1,6 @@
 html {
   background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  background-image: -webkit-linear-gradient(65deg, #687DE5 50%, #BAC5F9 50%);
   min-height: 1000px;
   font-family: 'helvetica neue';
 }
@@ -19,7 +19,7 @@ h1 {
 }
 
 #heading {
-  background-color: #A683E3;
+  background-color: #687DE5;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@ button.add {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #687DE5;
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
@@ -87,7 +87,7 @@ button.tick {
   width: 40px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #41E08C;
+  background-color: #6F86F7;
   color: #fff;
   font-size: 25px;
   padding-bottom: 6px;
@@ -124,6 +124,11 @@ footer {
 .status_btn{
   width: fit-content;
   min-height: 10px;
-  margin: 10%;
-  margin-bottom: 5%;
+  margin: 4% 5% 5% 10%;
+  border-color: transparent;
+  background-color: #586AC4;
+  color: #fff;
+  font-family: 'helvetica neue';
+  font-size: 19px;
+  padding-bottom: 6px;
 }

@@ -19,7 +19,7 @@ const item3 = new List({
 });
   
 const item4 = new List({
-    item: "Hit this to update the status -->"
+    item: "To update the status hit this -->"
 });
 
 const defaultItems = [item1, item2, item3, item4];
