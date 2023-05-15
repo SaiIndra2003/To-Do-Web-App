@@ -28,42 +28,7 @@ app.use("/",MainRoute);
 
 
 
-app.get("/pending",function(req,res){
-  Item.find({status: "Pending"},function(err,PendingTasks){
-    if(!err){
-      res.render("pending",{Tasks: PendingTasks});
-    }
-    else{
-      console.log(err);
-      res.redirect("/");
-    }
-  });
 
-});
-
-app.delete("/pending/delete", function(req, res) {
-  const checkdeItemId = req.body.checkbox;
-    Item.findByIdAndRemove(checkdeItemId, function(err) {
-      if (!err) {
-        console.log("Removed Succesfully");
-        res.redirect("/pending");
-      }
-    });
-});
-
-app.patch("/pending/complete",function(req,res){
-  const Itemid = req.body.id;
-  Item.findByIdAndUpdate(Itemid,{status: "Completed"},function(err){
-    if(!err){
-      console.log("Updated succesfully");
-      res.redirect("/pending");
-    }
-    else{
-      console.log(err);
-      res.redirect("/");
-    }
-  })
-});
 
 app.get("/completed",function(req,res){
   Item.find({status: "Completed"},function(err,CompletedTasks){

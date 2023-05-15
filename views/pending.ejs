@@ -7,11 +7,11 @@
 <div class="box">
 <% Tasks.forEach(function(Task){ %>
         <div class="item">
-        <form action="/pending/delete?_method=delete" method="post">
+        <form action="/pending?_method=delete" method="post">
           <input type="Checkbox" name="checkbox" value="<%= Task._id %>" onChange="this.form.submit()">
         </form>
           <p> <%= Task.item %> </p>
-          <form action="/pending/complete?_method=PATCH" method="POST">
+          <form action="/pending?_method=PATCH" method="POST">
             <input type="Checkbox"  id="check" name="id" value="<%= Task._id %>" onChange="this.form.submit()">
           </form>
         </div>
