@@ -1,4 +1,4 @@
-<%- include("headers") -%>
+<%- include("partials/header") -%>
 <div class="box" id="heading">
     <h1> Completed tasks </h1>
     <a href="/">Home</a>
@@ -7,11 +7,11 @@
 <div class="box">
 <% Tasks.forEach(function(Task){ %>
         <div class="item">
-          <form action="/completed/delete?_method=delete" method="post">
+          <form action="/completed?_method=delete" method="post">
             <input type="Checkbox" name="checkbox" value="<%= Task._id %>" onChange="this.form.submit()">
           </form>
           <p> <%= Task.item %> </p>
         </div>
 <% }); %>
 </div>
-<%- include("footer") -%>
+<%- include("partials/footer") -%>
