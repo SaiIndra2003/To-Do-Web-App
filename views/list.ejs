@@ -1,0 +1,33 @@
+<%- include("headers") -%>
+
+
+  <div class="box" id="heading">
+    <h1> List </h1>
+  </div>
+
+  <div class="box">
+
+  <% newListItems.forEach(function(item){ %>
+      <div class="item">
+      <form action="/delete?_method=delete" method="post">
+        <input type="Checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+      </form>
+        <p> <%= item.item %> </p>
+        <form action="/complete?_method=PATCH" method="POST">
+          <% if(item.status === "Completed") { %>
+            <button type="submit" name="btn" class="tick last">&check;</button>
+          <% } else { %>
+            <input type="Checkbox" class="last" id="check" name="id" value="<%= item._id %>" onChange="this.form.submit()">
+          <% } %>
+        </form>
+      </div>
+  <% }); %>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="btn" class="add">+</button>
+    </form>
+    <a href="/pending"><button type="button" name="btn" class="status_btn">pending</button></a>
+    <a href="/completed"><button type="button" name="btn" class="status_btn">completed</button></a>  
+  </div>
+<%- include("footer") -%>
