@@ -29,19 +29,13 @@ h1 {
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
   position: relative;
+  width: 100%;
 }
 
 .last{
   position: absolute;
   bottom: 0;
   margin-bottom: 10px;
-}
-
-#check{
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 26px;
-  margin-right: 0%;
 }
 
 /* .item:last-child {
@@ -92,7 +86,23 @@ button.tick {
   font-size: 25px;
   padding-bottom: 6px;
   border-width: 0;
+  margin-right: 0%;
+  margin-left: 70%;
 }
+
+.form{
+  margin-right: 0%;
+  width: 100%;
+}
+
+#check{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 26px;
+  margin-right: 0%;
+  margin-left: 75%;
+}
+
 
 input[type="text"] {
   text-align: center;

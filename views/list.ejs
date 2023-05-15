@@ -12,12 +12,14 @@
       <form action="/?_method=delete" method="post">
         <input type="Checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
       </form>
+      <form action="/?_method=PATCH" method="POST" class="form">
+        <div>
         <p> <%= item.item %> </p>
-        <form action="/?_method=PATCH" method="POST">
+      </div>
           <% if(item.status === "Completed") { %>
             <button type="submit" name="btn" class="tick last">&check;</button>
           <% } else { %>
-            <input type="Checkbox" class="last" id="check" name="id" value="<%= item._id %>" onChange="this.form.submit()">
+            <input type="Checkbox" class="last formCheck" id="check" name="id" value="<%= item._id %>" onChange="this.form.submit()">
           <% } %>
         </form>
       </div>
